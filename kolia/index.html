@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>КОЛІЯ · шиномонтаж на Лівому березі Києва</title>
+  <meta name="description" content="Шиномонтаж, балансування, ремонт шин, правка дисків і сезонне зберігання. Запис на точний час, 8:00–21:00 щодня.">
+  <meta name="theme-color" content="#1b1817">
+  <meta property="og:title" content="КОЛІЯ · шиномонтаж">
+  <meta property="og:description" content="Знову на колесах. Знову за планом. Запис на точний час без черги.">
+  <meta property="og:image" content="img/tread-dark.jpg">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="is-intro">
+
+  <svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-arrow" viewBox="0 0 16 16"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="square"/></symbol>
+    <symbol id="i-left" viewBox="0 0 16 16"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="i-right" viewBox="0 0 16 16"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2"/></symbol>
+  </svg>
+
+  <a class="skip" href="#main">Перейти до змісту</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a class="logo" href="#top" aria-label="КОЛІЯ, на початок сторінки">
+      <svg class="logo__mark" viewBox="0 0 40 28" aria-hidden="true">
+        <path d="M0 28 10 0h8L8 28z"/><path d="M12 28 22 0h8L20 28z"/><path class="logo__mark-hot" d="M24 28 34 0h6v28z"/>
+      </svg>
+      <span class="logo__text"><b>КОЛІЯ</b><small>шиномонтаж · Київ</small></span>
+    </a>
+    <nav class="nav__links" aria-label="Основна навігація">
+      <a href="#services">Послуги</a>
+      <a href="#prices">Ціни</a>
+      <a href="#box">Бокс</a>
+      <a href="#contacts">Контакти</a>
+    </nav>
+    <div class="nav__right">
+      <a class="nav__phone" href="tel:+380674121890">+380 67 412 18 90</a>
+      <a class="btn btn--sm" href="#booking">Записатися<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <button class="nav__burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Відкрити меню"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" hidden>
+    <nav aria-label="Мобільна навігація">
+      <a href="#services">Послуги</a>
+      <a href="#prices">Ціни</a>
+      <a href="#box">Бокс</a>
+      <a href="#contacts">Контакти</a>
+    </nav>
+    <a class="menu__phone" href="tel:+380674121890">+380 67 412 18 90</a>
+    <a class="btn" href="#booking">Записатися на заїзд<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </div>
+
+  <main id="main">
+
+    <!-- ============ HERO: інтро + обертання колеса на скролі ============ -->
+    <section class="hero" id="top" aria-label="КОЛІЯ шиномонтаж">
+      <div class="hero__stage" id="stage">
+        <div class="hero__studio" aria-hidden="true"></div>
+
+        <div class="hero__word" id="heroWord" aria-hidden="true">
+          <span class="ch">К</span><span class="ch">О</span><span class="ch">Л</span><span class="ch">І</span><span class="ch">Я</span>
+        </div>
+
+        <canvas class="hero__canvas" id="wheel" aria-hidden="true"></canvas>
+        <div class="hero__flash" id="flash" aria-hidden="true"></div>
+
+        <div class="hero__ruler" aria-hidden="true">
+          <span class="hero__readout"><small>кут</small><b id="readout">72°</b></span>
+        </div>
+
+        <p class="hero__eyebrow">Лівий берег · 8:00–21:00 щодня</p>
+
+        <div class="hero__copy" id="heroCopy">
+          <h1 class="hero__title"><span class="ln"><span>Знову на колесах.</span></span><span class="ln"><span>Знову за планом.</span></span></h1>
+          <p class="hero__lead">Перевзуємо, збалансуємо, закриємо прокол. Записуєтесь на точний час і заїжджаєте без черги.</p>
+          <div class="hero__actions">
+            <a class="btn" href="#booking">Обрати час<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="link link--light" href="#prices">Ціни на шиномонтаж</a>
+          </div>
+        </div>
+
+        <div class="hero__meta" id="heroMeta">
+          <p class="hero__meta-num"><b>25</b><span>хв</span></p>
+          <p>середній шиномонтаж<br>однієї машини</p>
+        </div>
+
+        <div class="hero__badge" id="heroBadge">
+          <p class="hero__badge-num"><b>12</b><span>міс</span></p>
+          <p>гарантії на роботу<br>і герметичність</p>
+        </div>
+
+        <div class="hero__specs" id="specs">
+          <p class="hero__specs-title">Що бачить майстер у кожному колесі</p>
+          <div class="spec" data-anchor="tread">
+            <span class="spec__n">01</span>
+            <h2 class="spec__t">Протектор</h2>
+            <p>Міряємо глибину в трьох точках і чесно кажемо, скільки сезонів лишилось.</p>
+          </div>
+          <div class="spec" data-anchor="rim">
+            <span class="spec__n">02</span>
+            <h2 class="spec__t">Диск</h2>
+            <p>Биття, вм'ятини, балансування з точністю до одного грама.</p>
+          </div>
+          <div class="spec" data-anchor="caliper">
+            <span class="spec__n">03</span>
+            <h2 class="spec__t">Гальма</h2>
+            <p>Поки колесо зняте, безкоштовно дивимось колодки і супорт.</p>
+          </div>
+        </div>
+
+        <svg class="hero__lines" id="lines" aria-hidden="true">
+          <path pathLength="1"/><path pathLength="1"/><path pathLength="1"/>
+          <circle r="5"/><circle r="5"/><circle r="5"/>
+        </svg>
+
+        <div class="hero__hint" id="hint" aria-hidden="true"><span>Гортайте</span><i></i></div>
+      </div>
+    </section>
+
+    <!-- ============ SYMPTOMS ============ -->
+    <section class="symptoms" aria-labelledby="symptoms-title">
+      <div class="symptoms__head wrap">
+        <p class="label" id="symptoms-title">Коли пора до нас</p>
+        <p class="symptoms__note">Якщо впізнали хоч одне, не відкладайте до вихідних.</p>
+      </div>
+      <div class="marquee">
+        <ul class="marquee__track">
+          <li>Кермо б'є на швидкості</li><li>Авто тягне вбік</li><li>Колесо втрачає тиск</li><li>Гул на трасі</li><li>Спіймали яму</li>
+          <li aria-hidden="true">Кермо б'є на швидкості</li><li aria-hidden="true">Авто тягне вбік</li><li aria-hidden="true">Колесо втрачає тиск</li><li aria-hidden="true">Гул на трасі</li><li aria-hidden="true">Спіймали яму</li>
+        </ul>
+      </div>
+      <div class="marquee marquee--rev">
+        <ul class="marquee__track">
+          <li>Протектор стерся нерівно</li><li>На боковині грижа</li><li>Вранці +3 °C</li><li>Нові диски, старі шини</li><li>Горить датчик тиску</li>
+          <li aria-hidden="true">Протектор стерся нерівно</li><li aria-hidden="true">На боковині грижа</li><li aria-hidden="true">Вранці +3 °C</li><li aria-hidden="true">Нові диски, старі шини</li><li aria-hidden="true">Горить датчик тиску</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="services" id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="label">01 / Що робимо</p>
+          <p class="sec-head__aside">6 послуг, які закривають 95% звернень</p>
+        </div>
+        <div class="services__grid">
+          <div class="services__intro">
+            <h2 class="h2 split" id="services-title"><span class="ln"><span>Все навколо</span></span><span class="ln"><span>ваших коліс.</span></span></h2>
+            <p class="services__text" data-reveal>Беремося за те, що стосується колеса. Двигун і підвіску лишаємо профільним сервісам, зате колесо знаємо до грама.</p>
+            <div class="services__range" data-reveal>
+              <p class="services__range-label">Легкові й кросовери</p>
+              <p class="services__range-num">R13–R24</p>
+              <p class="services__range-note">Низький профіль і run-flat теж беремо. Стенд без монтажної лопатки, диск не дряпаємо.</p>
+            </div>
+            <figure class="services__photo" data-reveal>
+              <img src="img/garage-tire.jpg" data-fallback="https://images.unsplash.com/photo-1645445522156-9ac06bc7a767?auto=format&fit=crop&w=1400&q=80" alt="Майстер працює з колесом у боксі шиномонтажу" loading="lazy" width="1400" height="1750">
+            </figure>
+          </div>
+
+          <div class="acc" id="acc">
+            <div class="acc__item is-open">
+              <h3 class="acc__h"><button class="acc__btn" type="button" aria-expanded="true" aria-controls="acc-1" id="acc-b1"><span class="acc__n">01</span><span class="acc__t">Шиномонтаж</span><span class="acc__p">від 520 ₴</span><span class="acc__i" aria-hidden="true"></span></button></h3>
+              <div class="acc__panel" id="acc-1" role="region" aria-labelledby="acc-b1"><div class="acc__inner">
+                <p>Знімаємо, перебортовуємо, ставимо назад. Колеса затягуємо динамометричним ключем за регламентом виробника, а не «на відчуття».</p>
+                <dl class="acc__dl"><div><dt>Час</dt><dd>20–25 хв</dd></div><div><dt>Комплект</dt><dd>4 колеса</dd></div></dl>
+                <a class="link" href="#booking" data-service="Шиномонтаж">Записатися на шиномонтаж</a>
+              </div></div>
+            </div>
+            <div class="acc__item">
+              <h3 class="acc__h"><button class="acc__btn" type="button" aria-expanded="false" aria-controls="acc-2" id="acc-b2"><span class="acc__n">02</span><span class="acc__t">Балансування</span><span class="acc__p">від 320 ₴</span><span class="acc__i" aria-hidden="true"></span></button></h3>
+              <div class="acc__panel" id="acc-2" role="region" aria-labelledby="acc-b2"><div class="acc__inner">
+                <p>Автоматичний стенд з лазерною вказівкою місця вантажу. Якщо кермо б'є на 90 км/год, найчастіше справа саме тут.</p>
+                <dl class="acc__dl"><div><dt>Час</dt><dd>15 хв</dd></div><div><dt>Точність</dt><dd>до 1 г</dd></div></dl>
+                <a class="link" href="#booking" data-service="Балансування">Записатися на балансування</a>
+              </div></div>
+            </div>
+            <div class="acc__item">
+              <h3 class="acc__h"><button class="acc__btn" type="button" aria-expanded="false" aria-controls="acc-3" id="acc-b3"><span class="acc__n">03</span><span class="acc__t">Ремонт шин</span><span class="acc__p">від 250 ₴</span><span class="acc__i" aria-hidden="true"></span></button></h3>
+              <div class="acc__panel" id="acc-3" role="region" aria-labelledby="acc-b3"><div class="acc__inner">
+                <p>Прокол ставимо латкою-грибком зсередини, без джгутів «до першої траси». Бокові порізи оцінюємо чесно: іноді шину краще замінити.</p>
+                <dl class="acc__dl"><div><dt>Час</dt><dd>30–40 хв</dd></div><div><dt>Гарантія</dt><dd>12 міс</dd></div></dl>
+                <a class="link" href="#booking" data-service="Ремонт шин">Записатися на ремонт</a>
+              </div></div>
+            </div>
+            <div class="acc__item">
+              <h3 class="acc__h"><button class="acc__btn" type="button" aria-expanded="false" aria-controls="acc-4" id="acc-b4"><span class="acc__n">04</span><span class="acc__t">Зберігання шин</span><span class="acc__p">від 900 ₴</span><span class="acc__i" aria-hidden="true"></span></button></h3>
+              <div class="acc__panel" id="acc-4" role="region" aria-labelledby="acc-b4"><div class="acc__inner">
+                <p>Мийка, маркування, чохли і стелаж при +5…+20 °C. У новий сезон колеса вже чекають у боксі на ваш час.</p>
+                <dl class="acc__dl"><div><dt>Термін</dt><dd>сезон</dd></div><div><dt>Ціна</dt><dd>за комплект</dd></div></dl>
+                <a class="link" href="#booking" data-service="Зберігання шин">Залишити шини на сезон</a>
+              </div></div>
+            </div>
+            <div class="acc__item">
+              <h3 class="acc__h"><button class="acc__btn" type="button" aria-expanded="false" aria-controls="acc-5" id="acc-b5"><span class="acc__n">05</span><span class="acc__t">Правка дисків</span><span class="acc__p">від 600 ₴</span><span class="acc__i" aria-hidden="true"></span></button></h3>
+              <div class="acc__panel" id="acc-5" role="region" aria-labelledby="acc-b5"><div class="acc__inner">
+                <p>Сталеві та легкосплавні. Вирівнюємо биття після ями, перевіряємо на тріщини до того, як братися за роботу.</p>
+                <dl class="acc__dl"><div><dt>Час</dt><dd>від 40 хв</dd></div><div><dt>Диски</dt><dd>R13–R22</dd></div></dl>
+                <a class="link" href="#booking" data-service="Правка дисків">Записатися на правку</a>
+              </div></div>
+            </div>
+            <div class="acc__item">
+              <h3 class="acc__h"><button class="acc__btn" type="button" aria-expanded="false" aria-controls="acc-6" id="acc-b6"><span class="acc__n">06</span><span class="acc__t">Виїзд до клієнта</span><span class="acc__p">від 1 400 ₴</span><span class="acc__i" aria-hidden="true"></span></button></h3>
+              <div class="acc__panel" id="acc-6" role="region" aria-labelledby="acc-b6"><div class="acc__inner">
+                <p>Мобільна бригада на Лівому березі: офіс, паркінг ЖК, узбіччя. Веземо стенд, компресор і вантажі.</p>
+                <dl class="acc__dl"><div><dt>Приїзд</dt><dd>до 60 хв</dd></div><div><dt>Райони</dt><dd>Лівий берег</dd></div></dl>
+                <a class="link" href="#booking" data-service="Виїзд до клієнта">Викликати бригаду</a>
+              </div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DARK BAND ============ -->
+    <section class="band" aria-labelledby="band-title">
+      <div class="band__media" aria-hidden="true">
+        <img class="band__img" id="bandImg" src="img/tread-dark.jpg" data-fallback="https://images.unsplash.com/photo-1753030148904-16130157a3e5?auto=format&fit=crop&w=2000&q=80" alt="" width="2000" height="1333">
+      </div>
+      <div class="band__content wrap">
+        <p class="label label--light">Як ми працюємо</p>
+        <h2 class="h2 h2--xl split" id="band-title"><span class="ln"><span>Тримаємо темп.</span></span><span class="ln"><span>Бережемо диски.</span></span></h2>
+        <ol class="band__steps">
+          <li data-reveal><span class="band__n">01 / до роботи</span><h3>Спершу дивимось</h3><p>Оглядаємо шини й диски при вас і називаємо ціну до того, як взяли ключ.</p></li>
+          <li data-reveal><span class="band__n">02 / у боксі</span><h3>Працюємо акуратно</h3><p>Безконтактний стенд, захисні накладки, динамометричний ключ на кожну гайку.</p></li>
+          <li data-reveal><span class="band__n">03 / після</span><h3>Відповідаємо за результат</h3><p>Протягом 12 місяців повернемо тиск і баланс безкоштовно, якщо щось пішло не так.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ PRICES ============ -->
+    <section class="prices" id="prices" aria-labelledby="prices-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="label">02 / Ціни</p>
+          <p class="sec-head__aside">Актуально на сезон осінь 2026</p>
+        </div>
+        <div class="prices__top">
+          <h2 class="h2 split" id="prices-title"><span class="ln"><span>Ціну видно</span></span><span class="ln"><span>до заїзду.</span></span></h2>
+          <div class="tabs" role="tablist" aria-label="Тип авто">
+            <button class="tabs__btn is-active" role="tab" type="button" aria-selected="true" aria-controls="price-panel" data-set="car" id="tab-car">Легкові</button>
+            <button class="tabs__btn" role="tab" type="button" aria-selected="false" aria-controls="price-panel" data-set="cross" id="tab-cross" tabindex="-1">Кросовери</button>
+            <button class="tabs__btn" role="tab" type="button" aria-selected="false" aria-controls="price-panel" data-set="suv" id="tab-suv" tabindex="-1">Позашляховики</button>
+          </div>
+        </div>
+
+        <div class="prices__panel" id="price-panel" role="tabpanel" aria-labelledby="tab-car">
+          <table class="ptable">
+            <caption class="visually-hidden">Ціни за комплект із 4 коліс, гривні</caption>
+            <thead>
+              <tr><th scope="col">Радіус</th><th scope="col">Шиномонтаж</th><th scope="col">Балансування</th><th scope="col">Комплекс <em>−10%</em></th></tr>
+            </thead>
+            <tbody id="priceBody">
+              <tr><th scope="row">R13</th><td>520 ₴</td><td>320 ₴</td><td>760 ₴</td></tr>
+              <tr><th scope="row">R14</th><td>560 ₴</td><td>340 ₴</td><td>810 ₴</td></tr>
+              <tr><th scope="row">R15</th><td>600 ₴</td><td>360 ₴</td><td>860 ₴</td></tr>
+              <tr><th scope="row">R16</th><td>680 ₴</td><td>400 ₴</td><td>970 ₴</td></tr>
+              <tr><th scope="row">R17</th><td>760 ₴</td><td>440 ₴</td><td>1 080 ₴</td></tr>
+              <tr><th scope="row">R18</th><td>880 ₴</td><td>480 ₴</td><td>1 220 ₴</td></tr>
+              <tr><th scope="row">R19</th><td>1 000 ₴</td><td>540 ₴</td><td>1 390 ₴</td></tr>
+              <tr><th scope="row">R20</th><td>1 120 ₴</td><td>600 ₴</td><td>1 550 ₴</td></tr>
+            </tbody>
+          </table>
+          <p class="prices__note">Ціни за комплект із 4 коліс. Низький профіль (серія 45 і нижче) +20%, run-flat +30%. Вантажі для балансування вже в ціні.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="gallery" id="box" aria-labelledby="gallery-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="label">03 / У боксі</p>
+          <p class="sec-head__aside">Кава, Wi-Fi і вікно в бокс, поки чекаєте</p>
+        </div>
+        <div class="gallery__top">
+          <h2 class="h2 split" id="gallery-title"><span class="ln"><span>Ви п'єте каву.</span></span><span class="ln"><span>Ми крутимо колеса.</span></span></h2>
+          <div class="gallery__ctrl">
+            <p class="gallery__count" aria-live="polite"><b id="galCur">01</b> / <span id="galTotal">06</span></p>
+            <button class="sq-btn" id="galPrev" type="button" aria-label="Попереднє фото"><svg class="ico" aria-hidden="true"><use href="#i-left"/></svg></button>
+            <button class="sq-btn" id="galNext" type="button" aria-label="Наступне фото"><svg class="ico" aria-hidden="true"><use href="#i-right"/></svg></button>
+          </div>
+        </div>
+      </div>
+      <div class="gallery__track" id="galTrack" tabindex="0" aria-label="Фото з боксу, гортайте горизонтально">
+        <figure class="slide">
+          <div class="slide__img"><img src="img/master-wheel.jpg" data-fallback="https://images.unsplash.com/photo-1687845542154-0063ce9e4fad?auto=format&fit=crop&w=1400&q=80" alt="Майстер знімає колесо з автомобіля" loading="lazy" width="1400" height="1050"></div>
+          <figcaption><span>01 / шиномонтаж</span><b>Новий сезон, ті самі диски.</b><small>Знімаємо колеса за 5 хвилин, машина вже на підйомнику.</small></figcaption>
+        </figure>
+        <figure class="slide">
+          <div class="slide__img"><img src="img/tread-close.jpg" data-fallback="https://images.unsplash.com/photo-1751601397743-fed8bbfd2965?auto=format&fit=crop&w=1400&q=80" alt="Протектор легкосплавного колеса крупним планом" loading="lazy" width="1400" height="1050"></div>
+          <figcaption><span>02 / огляд</span><b>Все починається з огляду.</b><small>Глибина протектора, дата виробництва, бокові порізи.</small></figcaption>
+        </figure>
+        <figure class="slide">
+          <div class="slide__img"><img src="img/mechanic-detail.jpg" data-fallback="https://images.pexels.com/photos/37809550/pexels-photo-37809550.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Майстер обробляє шину в боксі" loading="lazy" width="1400" height="1050"></div>
+          <figcaption><span>03 / деталі</span><b>Руками, а не лопаткою.</b><small>Борт шини проходить на стенді без контакту з диском.</small></figcaption>
+        </figure>
+        <figure class="slide">
+          <div class="slide__img"><img src="img/wheel-sport.jpg" data-fallback="https://images.unsplash.com/photo-1699325490806-902b139a6682?auto=format&fit=crop&w=1400&q=80" alt="Спортивне колесо з низькопрофільною шиною" loading="lazy" width="1400" height="1050"></div>
+          <figcaption><span>04 / низький профіль</span><b>R20 без подряпин.</b><small>Низькопрофільні шини монтуємо тільки на безлопатковому стенді.</small></figcaption>
+        </figure>
+        <figure class="slide">
+          <div class="slide__img"><img src="img/tire-wrench.jpg" data-fallback="https://images.unsplash.com/photo-1702146713922-613313be011d?auto=format&fit=crop&w=1400&q=80" alt="Шина і ключ на підлозі боксу" loading="lazy" width="1400" height="1050"></div>
+          <figcaption><span>05 / затяжка</span><b>Кожна гайка з моментом.</b><small>Динамометричний ключ і перевірка після 50 км, якщо попросите.</small></figcaption>
+        </figure>
+        <figure class="slide">
+          <div class="slide__img"><img src="img/workshop.jpg" data-fallback="https://images.pexels.com/photos/4116231/pexels-photo-4116231.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Майстри в автомобільному боксі" loading="lazy" width="1400" height="1050"></div>
+          <figcaption><span>06 / бокс</span><b>Два пости, нуль черги.</b><small>Запис кожні 30 хвилин, тож ваш час справді ваш.</small></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ BOOKING ============ -->
+    <section class="booking" id="booking" aria-labelledby="booking-title">
+      <div class="wrap booking__grid">
+        <div class="booking__intro">
+          <p class="label label--on-signal">04 / Запис</p>
+          <h2 class="h2 h2--xl split" id="booking-title"><span class="ln"><span>За вами час.</span></span><span class="ln"><span>За нами колеса.</span></span></h2>
+          <p class="booking__text" data-reveal>Залиште номер. Передзвонимо, уточнимо розмір і запропонуємо найближче вікно.</p>
+          <div class="booking__facts" data-reveal>
+            <p><b>2</b><span>пости, запис<br>кожні 30 хв</span></p>
+            <p><b>10</b><span>хвилин до<br>дзвінка майстра</span></p>
+          </div>
+        </div>
+
+        <div class="booking__panel" data-reveal>
+          <form class="form" id="form" novalidate>
+            <p class="form__title">Запис у КОЛІЮ</p>
+            <div class="field">
+              <label for="f-service">Послуга</label>
+              <select id="f-service" name="service" required>
+                <option value="">Оберіть послугу</option>
+                <option>Шиномонтаж</option>
+                <option>Балансування</option>
+                <option>Ремонт шин</option>
+                <option>Зберігання шин</option>
+                <option>Правка дисків</option>
+                <option>Виїзд до клієнта</option>
+              </select>
+              <p class="field__err" id="e-service"></p>
+            </div>
+            <div class="field">
+              <label for="f-name">Як до вас звертатися</label>
+              <input id="f-name" name="name" type="text" autocomplete="given-name" placeholder="Олена" required>
+              <p class="field__err" id="e-name"></p>
+            </div>
+            <div class="field">
+              <label for="f-phone">Телефон</label>
+              <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+380 __ ___ __ __" required>
+              <p class="field__err" id="e-phone"></p>
+            </div>
+            <fieldset class="field chips">
+              <legend>Коли зручно</legend>
+              <label class="chip"><input type="radio" name="day" value="сьогодні" checked><span>Сьогодні</span></label>
+              <label class="chip"><input type="radio" name="day" value="завтра"><span>Завтра</span></label>
+              <label class="chip"><input type="radio" name="day" value="інший день"><span>Інший день</span></label>
+            </fieldset>
+            <button class="btn btn--dark btn--block" id="submit" type="submit"><span class="btn__label">Домовитися про заїзд</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+            <p class="form__legal">Натискаючи кнопку, ви погоджуєтесь, що ми подзвонимо саме з приводу запису.</p>
+          </form>
+
+          <div class="done" id="done" hidden tabindex="-1">
+            <span class="done__icon"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span>
+            <p class="done__title">Заявку прийнято</p>
+            <p class="done__text" id="doneText">Передзвонимо протягом 10 хвилин.</p>
+            <button class="link" id="again" type="button">Надіслати ще одну заявку</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="contacts">
+    <div class="wrap">
+      <div class="footer__top">
+        <h2 class="h2 split"><span class="ln"><span>Гарного шляху.</span></span><span class="ln"><span>Заїжджайте ще.</span></span></h2>
+        <a class="btn" href="#booking">Записатися на заїзд<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="footer__info">
+        <div>
+          <p class="footer__k">Знайти нас</p>
+          <p class="footer__v">Київ, вул. Здолбунівська, 7Б</p>
+          <p class="footer__s">Лівий берег, 7 хв пішки від м. Осокорки</p>
+        </div>
+        <div>
+          <p class="footer__k">Ми в боксі</p>
+          <p class="footer__v">8:00–21:00</p>
+          <p class="footer__s">Щодня, у сезон без вихідних</p>
+        </div>
+        <div>
+          <p class="footer__k">На зв'язку</p>
+          <p class="footer__v"><a href="tel:+380674121890">+380 67 412 18 90</a></p>
+          <p class="footer__s"><a href="https://t.me/" rel="noopener">Telegram</a> · <a href="viber://chat?number=%2B380674121890">Viber</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer__brand" aria-hidden="true">
+      <canvas class="footer__wheel" id="wheelMini"></canvas>
+      <span class="letter-hover">
+      <p class="footer__word"><span class="letter-hover">КОЛІЯ</span></p>
+    </div>
+    <div class="wrap footer__bar">
+      <p>© 2026 КОЛІЯ шиномонтаж</p>
+      <p>Фото: Unsplash, Pexels</p>
+      <a href="#top" class="link link--light">Нагору</a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
