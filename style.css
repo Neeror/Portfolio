@@ -525,7 +525,7 @@ h1 em,h2 em {
     grid-template-columns:1fr;
   }
 }
-@media(max-width:640px) {
+@media(max-width:768px) {
   .shell {
     width:calc(100% - 32px);
   }
