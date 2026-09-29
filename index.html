@@ -1,26 +1,293 @@
 <!doctype html>
 <html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Neeror, Web Developer">
-  <title>Neeror | Web Developer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <canvas id="starfield" aria-hidden="true"></canvas>
-  <div class="cursor-dot" aria-hidden="true"></div><div class="cursor-ring" aria-hidden="true"></div>
-  <header class="header"><a class="logo" href="#top"><span>N</span>neeror</a><nav aria-label="Навігація"><a href="#about">Про мене</a><a href="#skills">Стек</a><a href="#projects">Проєкти</a><a href="#contact">Контакти</a></nav><a class="top-contact" href="https://t.me/NeIR442" target="_blank" rel="noreferrer">Telegram ↗</a><button class="menu" type="button" aria-label="Меню" aria-expanded="false"><i></i><i></i></button></header>
-  <main id="top">
-    <section class="hero shell"><div class="hero-copy reveal"><p class="eyebrow"><b></b> відкритий до нових проєктів</p><h1>Будую<br><em>живі</em> вебсайти.</h1><p class="lead">Web Developer, який перетворює ідеї на точні, швидкі та виразні цифрові продукти.</p><div class="actions"><a class="button light" href="#projects">Дивитись проєкти <span>↗</span></a><a class="button dark" href="https://t.me/NeIR442" target="_blank" rel="noreferrer">Telegram <b>●</b></a></div><p class="meta"><span>01</span> HTML / CSS / JS / GIT / TS / REACT</p></div><div class="orbit-stage reveal delay" aria-label="Технології в моєму стеку"><div class="glow"></div><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div><div class="core"><strong>&lt;/&gt;</strong><span>build with intent</span></div><div class="tech html"><strong>5</strong><small>HTML</small></div><div class="tech css"><strong>✦</strong><small>CSS</small></div><div class="tech js"><strong>JS</strong><small>JavaScript</small></div><div class="tech react"><strong>⚛</strong><small>React</small></div><div class="tech ts"><strong>TS</strong><small>TypeScript</small></div><div class="tech git"><strong>⌘</strong><small>Git</small></div></div></section>
-    <section id="about" class="section shell"><p class="eyebrow reveal">— про мене</p><div class="two-col"><h2 class="reveal">Код має<br><em>рухатись.</em></h2><div class="copy reveal delay"><p>Мені подобається робити інтерфейси, які не просто працюють, а залишають після себе відчуття. Чистий код, увага до деталей і motion, який пояснює взаємодію.</p><p>Від першого рядка HTML до фінального hover-стану я тримаю весь продукт у голові.</p></div></div><div class="stats reveal"><div><strong>02</strong><span>лендінги</span></div><div><strong>08</strong><span>технологій</span></div><div><strong>∞</strong><span>уваги до деталей</span></div></div></section>
-    <section id="skills" class="section shell"><div class="heading"><div><p class="eyebrow reveal">— мій інструментарій</p><h2 class="reveal">Технології,<br><em>які тримають форму.</em></h2></div><p class="side-copy reveal delay">Не збираю стек заради списку. Беру інструмент, який найкраще служить ідеї.</p></div><div class="skills reveal"><div><span>01</span><h3>HTML</h3><p>Семантична структура і доступність</p><i>markup</i></div><div><span>02</span><h3>CSS</h3><p>Системи, responsive, motion</p><i>visuals</i></div><div><span>03</span><h3>JavaScript</h3><p>Логіка, взаємодія, canvas</p><i>behavior</i></div><div><span>04</span><h3>React / TS</h3><p>Компоненти й масштабовані продукти</p><i>systems</i></div><div><span>05</span><h3>Git</h3><p>Контроль версій без хаосу</p><i>craft</i></div></div></section>
-    <section id="projects" class="section shell"><div class="heading"><div><p class="eyebrow reveal">— вибрані роботи</p><h2 class="reveal">Відкрий<br><em>проєкт.</em></h2></div><p class="side-copy reveal delay">Картки відкривають готові лендинги з локальних папок.</p></div><div class="projects"><a class="project reveal" href="kolia/index.html"><div class="visual"><img src="https://raw.githubusercontent.com/Neeror/Portfolio/main/kolia/img/tread-dark.jpg" alt="Протектор шини"><span>01 / 02</span><b>↗</b></div><div class="project-row"><div><small>interactive landing</small><h3>КОЛІЯ <em>шиномонтаж</em></h3></div><time>2026</time></div></a><a class="project reveal delay" href="orvelle/index.html"><div class="visual"><img src="https://raw.githubusercontent.com/Neeror/Portfolio/main/orvelle/images/hero-chrono.jpg" alt="Преміальний годинник"><span>02 / 02</span><b>↗</b></div><div class="project-row"><div><small>storytelling landing</small><h3>ORVELLE <em>watch atelier</em></h3></div><time>2026</time></div></a></div></section>
-    <section id="contact" class="contact section shell reveal"><p class="eyebrow">— наступний крок</p><h2>Є ідея?<br><em>Давай зберемо її.</em></h2><a href="https://t.me/NeIR442" target="_blank" rel="noreferrer">@NeIR442 <b>↗</b></a></section>
-  </main><footer class="footer shell"><span>© 2026 neeror</span><span>built with HTML / CSS / JS</span><a href="https://github.com/Neeror/Portfolio" target="_blank" rel="noreferrer">GitHub ↗</a></footer>
-  <script src="script.js" defer></script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Neeror, Web Developer">
+    <title>Neiro | Web Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <canvas id="starfield" aria-hidden="true"></canvas>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <header class="header">
+      <a class="logo" href="#top">
+        <span>N</span>neiro
+      </a>
+
+      <nav aria-label="Навігація">
+        <a href="#about">Про мене</a>
+        <a href="#skills">Стек</a>
+        <a href="#projects">Проєкти</a>
+        <a href="#contact">Контакти</a>
+      </nav>
+
+      <a class="top-contact" href="https://t.me/NeIR442" target="_blank" rel="noreferrer">
+        Telegram ↗
+      </a>
+
+      <button class="menu" type="button" aria-label="Меню" aria-expanded="false">
+        <i></i>
+        <i></i>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero shell">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">
+            <b></b>
+            відкритий до нових проєктів
+          </p>
+
+          <h1>
+            Будую<br>
+            <em>живі</em> вебсайти.
+          </h1>
+
+          <p class="lead">
+            Web Developer, який перетворює ідеї на точні, швидкі та виразні цифрові продукти.
+          </p>
+
+          <div class="actions">
+            <a class="button light" href="#projects">
+              Дивитись проєкти <span>↗</span>
+            </a>
+
+            <a class="button dark" href="https://t.me/NeIR442" target="_blank" rel="noreferrer">
+              Telegram <b>●</b>
+            </a>
+          </div>
+
+          <p class="meta">
+            <span>01</span>
+            HTML / CSS / JS / GIT / TS / REACT
+          </p>
+        </div>
+
+        <div class="orbit-stage reveal delay" aria-label="Технології в моєму стеку">
+  <div class="glow"></div>
+  <div class="orbit orbit-a"></div>
+  <div class="orbit orbit-b"></div>
+  <div class="orbit orbit-c"></div>
+
+  <div class="core">
+    <strong></strong>
+    <span>build with intent</span>
+  </div>
+
+  <div class="tech html">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5">
+  <small>HTML</small>
+</div>
+
+  <div class="tech css">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3">
+  <small>CSS</small>
+</div>
+
+<div class="tech js">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript">
+  <small>JavaScript</small>
+</div>
+
+<div class="tech react">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React">
+  <small>React</small>
+</div>
+
+<div class="tech ts">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript">
+  <small>TypeScript</small>
+</div>
+
+<div class="tech git">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git">
+  <small>Git</small>
+</div>
+</div>
+      </section>
+
+      <section id="about" class="section shell">
+        <p class="eyebrow reveal">— про мене</p>
+
+        <div class="two-col">
+          <h2 class="reveal">
+            Код має<br>
+            <em>рухатись.</em>
+          </h2>
+
+          <div class="copy reveal delay">
+            <p>
+              Мені подобається робити інтерфейси, які не просто працюють, а залишають після себе відчуття. Чистий код, увага до деталей і motion, який пояснює взаємодію.
+            </p>
+
+            <p>
+              Від першого рядка HTML до фінального hover-стану я тримаю весь продукт у голові.
+            </p>
+          </div>
+        </div>
+
+        <div class="stats reveal">
+          <div>
+            <strong>02</strong>
+            <span>лендінги</span>
+          </div>
+
+          <div>
+            <strong>08</strong>
+            <span>технологій</span>
+          </div>
+
+          <div>
+            <strong>∞</strong>
+            <span>уваги до деталей</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section shell">
+        <div class="heading">
+          <div>
+            <p class="eyebrow reveal">— мій інструментарій</p>
+
+            <h2 class="reveal">
+              Технології,<br>
+              <em>які тримають форму.</em>
+            </h2>
+          </div>
+
+          <p class="side-copy reveal delay">
+            Не збираю стек заради списку. Беру інструмент, який найкраще служить ідеї.
+          </p>
+        </div>
+
+        <div class="skills reveal">
+          <div>
+            <span>01</span>
+            <h3>HTML</h3>
+            <p>Семантична структура і доступність</p>
+            <i>markup</i>
+          </div>
+
+          <div>
+            <span>02</span>
+            <h3>CSS</h3>
+            <p>Системи, responsive, motion</p>
+            <i>visuals</i>
+          </div>
+
+          <div>
+            <span>03</span>
+            <h3>JavaScript</h3>
+            <p>Логіка, взаємодія, canvas</p>
+            <i>behavior</i>
+          </div>
+
+          <div>
+            <span>04</span>
+            <h3>React / TS</h3>
+            <p>Компоненти й масштабовані продукти</p>
+            <i>systems</i>
+          </div>
+
+          <div>
+            <span>05</span>
+            <h3>Git</h3>
+            <p>Контроль версій без хаосу</p>
+            <i>craft</i>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section shell">
+        <div class="heading">
+          <div>
+            <p class="eyebrow reveal">— вибрані роботи</p>
+
+            <h2 class="reveal">
+              Відкрий<br>
+              <em>проєкт.</em>
+            </h2>
+          </div>
+
+          <p class="side-copy reveal delay">
+            Картки відкривають готові лендинги з локальних папок.
+          </p>
+        </div>
+
+        <div class="projects">
+          <a class="project reveal" href="kolia/index.html">
+            <div class="visual">
+               <img src="https://raw.githubusercontent.com/Neeror/Portfolio/main/kolia/img/tread-dark.jpg" alt="Протектор шини">
+               <span>01 / 02</span>
+               <b>↗</b>
+            </div>
+
+            <div class="project-row">
+              <div>
+                <small>interactive landing</small>
+                <h3>
+                  КОЛІЯ <em>шиномонтаж</em>
+                </h3>
+              </div>
+
+              <time>2026</time>
+            </div>
+          </a>
+
+          <a class="project reveal delay" href="orvelle/index.html">
+            <div class="visual">
+              <img src="https://raw.githubusercontent.com/Neeror/Portfolio/main/orvelle/images/hero-chrono.jpg" alt="Преміальний годинник">
+               <span>02 / 02</span>
+               <b>↗</b>
+            </div>
+
+            <div class="project-row">
+              <div>
+                <small>storytelling landing</small>
+                <h3>
+                  ORVELLE <em>watch atelier</em>
+                </h3>
+              </div>
+
+              <time>2026</time>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section shell reveal">
+        <p class="eyebrow">— наступний крок</p>
+
+        <h2>
+          Є ідея?<br>
+          <em>Давай зберемо її.</em>
+        </h2>
+
+        <a href="https://t.me/NeIR442" target="_blank" rel="noreferrer">
+          Telegram <b>↗</b>
+        </a>
+      </section>
+    </main>
+
+    <footer class="footer shell">
+      <span>© 2026 Neiro</span>
+      <span>built with HTML / CSS / JS</span>
+      <a href="https://github.com/Neeror/Portfolio" target="_blank" rel="noreferrer">
+        GitHub ↗
+      </a>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
 </html>
