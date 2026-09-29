@@ -642,6 +642,24 @@ h1 em,h2 em {
     order:3;
     width:100%;
   }
+  .header nav.open {
+  display: flex;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  gap: 0;
+  padding: 10px;
+  border: 1px solid oklch(35% .03 275 / .7);
+  border-radius: 18px;
+  background: oklch(11% .025 275 / .96);
+  backdrop-filter: blur(18px);
+}
+
+.header nav.open a {
+  padding: 14px 12px;
+}
 }
 @media(prefers-reduced-motion:reduce) {
   html {
